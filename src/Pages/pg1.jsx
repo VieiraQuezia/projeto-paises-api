@@ -1,41 +1,28 @@
 import { useEffect, useState } from "react";
 
-function Pg1() {
-  const [capital, setCapital] = useState("");
-  const [paises, setPaises] = useState([]);
+function PaisDetalhes() {
+  const [informacoesPais, setInformacoesPais] = useState(null);
 
   useEffect(() => {
-    async function fetchPaises() {
-      try {
-        const resposta = await fetch("https://restcountries.com/v3.1/all");
-        if (!resposta.ok) {
-          throw new Error("Erro ao buscar países");
-        }
-        const dados = await resposta.json();
-        setPaises(dados);
-      } catch (erro) {
-        console.error("Erro ao buscar países", erro);
-      }
+    const savedInformacoes = localStorage.getItem("informacoesPais");
+    if (savedInformacoes) {
+      setInformacoesPais(JSON.parse(savedInformacoes));
     }
-
-    fetchPaises();
   }, []);
 
-  useEffect(() => {
-    const recebe = localStorage.getItem("País");
-    if (recebe) {
-      const info = paises.find((p) => p.name.common === recebe);
-      if (info) {
-        setCapital(info.capital);
-      }
-    }
-  }, [paises]);
+  if (!informacoesPais) {
+    return <h2>Nenhuma informação de país disponível.</h2>;
+  }
 
   return (
     <div>
-      <p>{capital ? `Capital: ${capital}` : "Nenhuma mensagem salva"}</p>
+      <h2>Detalhes do País</h2>
+     
+      <p><strong>Capital:</strong> {informacoesPais.capital}</p>
+      <p><strong>Moeda:</strong> {informacoesPais.moeda}</p>
+      <p><strong>Maps:</strong> {informacoesPais.maps}</p>
     </div>
   );
 }
 
-export default Pg1;
+export default PaisDetalhes;
