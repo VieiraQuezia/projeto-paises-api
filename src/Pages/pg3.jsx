@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import NavBar from "../components/NavBar";
 function PaisDetalhes() {
   const [informacoesPais, setInformacoesPais] = useState(null);
 
@@ -16,6 +16,8 @@ function PaisDetalhes() {
 
   return (
     <div>
+      <NavBar pg3="ativo"/>
+
       <h2>Detalhes do País</h2>
       <img
         src={informacoesPais.bandeira}

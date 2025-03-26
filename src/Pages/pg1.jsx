@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-
+import Header from '../Components/header'
+import Navbar from '../Components/Navbar'
 function PaisDetalhes() {
   const [informacoesPais, setInformacoesPais] = useState(null);
 
@@ -16,6 +17,8 @@ function PaisDetalhes() {
 
   return (
     <div>
+      <Navbar pg1="ativo"/>
+
       <h2>Detalhes do País</h2>
      
       <p><strong>Capital:</strong> {informacoesPais.capital}</p>

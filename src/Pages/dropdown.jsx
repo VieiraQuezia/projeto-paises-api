@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import Navbar from "../components/Navbar";
 function Pais() {
   const [paisApi, setPaisApi] = useState([]);
   const [paisSelecionado, setPaisSelecionado] = useState(() => {
@@ -64,6 +64,8 @@ function Pais() {
 
   return (
     <div>
+      <Navbar home="ativo"/>
+
       <h2>Selecione um País:</h2>
       <select onChange={(event) => setPaisSelecionado(event.target.value)} value={paisSelecionado}>
         <option value="">Selecione um país</option>
