@@ -1,7 +1,7 @@
 import "./Footer.css";
 import logoinstagram from "../assets/instagram.png";
 import logofacebook from "../assets/facebook.png";
-import logo from "../assets/logo.png";
+import logo from "../../public/logo.png";
 import ImgGitHub from "../assets/github.png";
 
 function Footer() {
@@ -50,7 +50,7 @@ function Footer() {
         </section>
         <nav className="logos">
           <img className="imgLogo" src={logo} />
-          <a href="https://github.com/Ticoliro08" target="_blank">
+          <a href="https://github.com/VieiraQuezia/projeto-paises-api" target="_blank">
             <img className="imgGithub" src={ImgGitHub} />
           </a>
         </nav>

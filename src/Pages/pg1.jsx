@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import Header from '../Components/header'
 import Navbar from '../Components/Navbar'
+import "./dropdown.css"
+import Footer from "../components/Footer";
+
 function PaisDetalhes() {
   const [informacoesPais, setInformacoesPais] = useState(null);
 
@@ -18,12 +20,29 @@ function PaisDetalhes() {
   return (
     <div>
       <Navbar pg1="ativo"/>
+<center>
+      
+      <h2 className="detalhe">DETALHES DO PAÍS</h2>
+      </center>
+     <article className="bloquinhos">
 
-      <h2>Detalhes do País</h2>
-     
+     <nav className="bloquinho">
       <p><strong>Capital:</strong> {informacoesPais.capital}</p>
-      <p><strong>Moeda:</strong> {informacoesPais.moeda}</p>
-      <p><strong>Maps:</strong> {informacoesPais.maps}</p>
+      </nav>
+
+      <nav className="bloquinho">
+
+      <p><strong >Moeda:</strong> {informacoesPais.moeda}</p>
+      </nav>
+
+      <nav className="bloquinho">
+
+      <p><strong>Maps:</strong> <a href={informacoesPais.maps}>{informacoesPais.maps}</a> </p>
+
+      </nav>
+
+      </article>
+<Footer />
     </div>
   );
 }

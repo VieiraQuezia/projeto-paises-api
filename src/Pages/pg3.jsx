@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+
 function PaisDetalhes() {
   const [informacoesPais, setInformacoesPais] = useState(null);
 
@@ -18,17 +20,25 @@ function PaisDetalhes() {
     <div>
       <NavBar pg3="ativo"/>
 
-      <h2>Detalhes do País</h2>
-      <img
-        src={informacoesPais.bandeira}
-        alt={`Bandeira de ${informacoesPais.capital}`}
-        style={{ width: '160px', height: 'auto' }}
-      />
+      <center>
+<h2 className="detalhe">Detalhes do País</h2>
+
+</center>
+      
+      <article className="bloquinhos">
+
+<nav className="bloquinho">
      
       <p><strong>Área:</strong> {informacoesPais.area.toLocaleString()} km²</p>
+      </nav>
+      <nav className="bloquinho">
       <p><strong>Continente:</strong> {informacoesPais.continente}</p>
+      </nav>
+      <nav className="bloquinho">
       <p><strong>Fuso Horário:</strong> {informacoesPais.fuso}</p>
-
+</nav>
+    </article>
+    <Footer />
     </div>
   );
 }

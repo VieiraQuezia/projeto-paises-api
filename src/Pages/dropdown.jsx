@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "./dropdown.css";
+
+
+
 function Pais() {
   const [paisApi, setPaisApi] = useState([]);
   const [paisSelecionado, setPaisSelecionado] = useState(() => {
@@ -82,7 +86,7 @@ function Pais() {
 
       </article>
 
-      
+      <Footer />
     </div>
   );
 }

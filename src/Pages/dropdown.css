@@ -1,14 +1,19 @@
+
+/* ------------------------------ HOME */
 .bandeira{
  display: flex;
  justify-content: right;
 }
 
 .select{
-padding: 1%;
-width: 30%;
+padding: 2%;
+width: 50%;
 border: 2px solid grey;
 border-radius: 10px;
-background-color: rgb(201, 198, 198);
+background-color: #2e2e84;
+color: aliceblue;
+font-size: 1vw;
+
 
 }
 
@@ -21,10 +26,55 @@ background-color: rgb(201, 198, 198);
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+
+    background-color: rgb(245, 239, 239);
+
+    padding: 1% 0% 5%; 
 }
 
 .blocos{
     display: flex;
     justify-content: center;
     padding: 7%;
+}
+
+
+/* ------------------------------  PAGINAS */
+
+.bloquinho{
+    border: 2px solid black;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+
+    background-color: rgb(245, 239, 239);
+
+    padding: 2%; 
+
+    font-size: 1vw;
+ 
+}
+
+.bloquinhos{
+    display: flex;
+    justify-content: space-around;
+    padding: 7%;
+}
+
+
+
+.detalhe{
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    color: #2e2e84;
+    border: 10px solid white;
+    width: 50%;
+
+    backdrop-filter: blur(5px);
+
+}
+strong{
+font-size: 1.5vw;
 }
