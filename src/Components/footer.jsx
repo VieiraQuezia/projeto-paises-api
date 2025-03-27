@@ -19,7 +19,7 @@ function Footer() {
 
             <section className="info">
               <img className="imgRedes" src={logofacebook} />
-              <p> Tropa Mandioca 6.Oficial</p>
+              <p> Tropa Mandioca 6 Oficial</p>
             </section>
           </section>
 
