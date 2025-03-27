@@ -11,7 +11,6 @@ function Footer() {
         <section className="infoContatos">
           <section className="redes">
             <section className="info">
-              {" "}
               {/*classe para deixar o nome do lado da logo */}
               <img className="imgRedes" src={logoinstagram} />
               <p> @TropadaMandioca6_oficial</p>
@@ -32,7 +31,6 @@ function Footer() {
         <section className="informacoes">
           <section className="sobreNos">
             <p>
-              {" "}
               <h4> Tropa da Mandioca © 2025 </h4> – Nosso site, desenvolvido com
               React, React Router, useEffect e useState, permite que você
               escolha um país usando uma API. As informações selecionadas são
