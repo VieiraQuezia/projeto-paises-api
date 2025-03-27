@@ -62,11 +62,12 @@ function Pais() {
   if (loading) return <h2>Carregando Países...</h2>;
   if (erro) return <h2>Erro: {erro}</h2>;
 
-  const pais = paisApi.find((p) => p.name.common === paisSelecionado);
 
   return (
     <div>
       <Navbar home="ativo"/>
+<article className="blocos">
+<nav className="bloco">
 
       <h2>Selecione um País:</h2>
       <select className="select" onChange={(event) => setPaisSelecionado(event.target.value)} value={paisSelecionado}>
@@ -77,14 +78,11 @@ function Pais() {
           </option>
         ))}
       </select>
+      </nav>
 
-      {paisSelecionado && pais && (
-        <div>
-         
+      </article>
 
- 
-        </div>
-      )}
+      
     </div>
   );
 }

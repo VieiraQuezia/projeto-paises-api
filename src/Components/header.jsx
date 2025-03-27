@@ -6,6 +6,7 @@ function Header() {
      const [informacoesPais, setInformacoesPais] = useState(null);
     
       useEffect(() => {
+
         const savedInformacoes = localStorage.getItem("informacoesPais");
         if (savedInformacoes) {
           setInformacoesPais(JSON.parse(savedInformacoes));
