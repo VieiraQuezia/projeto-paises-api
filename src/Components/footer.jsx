@@ -1,7 +1,7 @@
 import "./Footer.css";
 import logoinstagram from "../assets/instagram.png";
 import logofacebook from "../assets/facebook.png";
-import logo from "../../public/logo.png";
+import logo from "/logo.png";
 import ImgGitHub from "../assets/github.png";
 
 function Footer() {

@@ -1,4 +1,4 @@
-import NavBar from './components/navBar';
+import NavBar from './Components/Navbar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Pages/dropdown';
 import Pg1 from './Pages/pg1';
@@ -15,10 +15,10 @@ function App() {
 <Header/>
       <BrowserRouter >
       <Routes >
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/pag1" element={<Pg1 />}></Route>
-      <Route path="/pag2" element={<Pg2 />}></Route>
-      <Route path="/pag3" element={<Pg3 />}></Route>
+      <Route path="/" element={<Home />}/>
+      <Route path="/pag1" element={<Pg1 />}/>
+      <Route path="/pag2" element={<Pg2 />}/>
+      <Route path="/pag3" element={<Pg3 />}/>
      </Routes >
       </BrowserRouter> 
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from '../Components/Navbar'
 import "./dropdown.css"
-import Footer from "../components/Footer";
+import Footer from "../Components/footer";
 
 function PaisDetalhes() {
   const [informacoesPais, setInformacoesPais] = useState(null);
