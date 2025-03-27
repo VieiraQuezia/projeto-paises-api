@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
+import "./dropdown.css";
 function Pais() {
   const [paisApi, setPaisApi] = useState([]);
   const [paisSelecionado, setPaisSelecionado] = useState(() => {
@@ -50,6 +51,7 @@ function Pais() {
           area: pais.area ? pais.area : "Área não disponível",
           continente: pais.continente ? pais.continente : "Continente não disponível",
           maps: pais.maps.googleMaps ? pais.maps.googleMaps : "Mapa não disponível",
+          nome: pais.name.common,
         };
 
         localStorage.setItem("informacoesPais", JSON.stringify(informacoesPais));
@@ -67,8 +69,8 @@ function Pais() {
       <Navbar home="ativo"/>
 
       <h2>Selecione um País:</h2>
-      <select onChange={(event) => setPaisSelecionado(event.target.value)} value={paisSelecionado}>
-        <option value="">Selecione um país</option>
+      <select className="select" onChange={(event) => setPaisSelecionado(event.target.value)} value={paisSelecionado}>
+        <option className="option" value="">Selecione um país</option>
         {paisApi.map((pais) => (
           <option key={pais.cca3} value={pais.name.common}>
             {pais.name.common}
@@ -78,12 +80,9 @@ function Pais() {
 
       {paisSelecionado && pais && (
         <div>
-          <img
-            src={pais.flags.png}
-            style={{ width: '160px', height: 'auto' }}
-            alt={`Bandeira de ${paisSelecionado}`}
-          />
-   
+         
+
+ 
         </div>
       )}
     </div>
